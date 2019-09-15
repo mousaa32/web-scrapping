@@ -1,0 +1,57 @@
+[
+  {
+    "le categorie de menu": [
+      "pizzas",
+      "baguettes",
+      "snacks",
+      "pasta",
+      "donuts",
+      "sweets",
+      "drinks",
+      "menus",
+      "kebaba"
+    ]
+  },
+  {
+    "les menus par categorie selectionne": [
+      "kebaba-bis",
+      "carnivore-sauce-bbq",
+      "carnivore-sauce-tomate",
+      "supreme",
+      "5-fromages-sauce-tomate",
+      "5-fromages-creme-fraiche",
+      "t-rex",
+      "chicken-bbq",
+      "pepperoni-lover",
+      "chickenita",
+      "bacon-groovy",
+      "crispy-chicken",
+      "cheesy-burger",
+      "montagnarde",
+      "chevre-miel",
+      "spicy",
+      "samourai",
+      "tex-mex-boeuf",
+      "tex-mex-poulet",
+      "bollywood",
+      "reggae",
+      "bacon-lover",
+      "reine",
+      "reine-sans-champignons",
+      "hawaienne",
+      "orientale",
+      "veggie",
+      "margherita",
+      "margherita-mixte",
+      "margherita-champignons",
+      "margherita-tomato",
+      "margherita-olives"
+    ]
+  },
+  {
+    "nom_de_la_recette": "arnivore sauce bbq"
+  },
+  {
+    "comp": "auce barbecue, mozzarella, poulet roti, boulettes de boeuf, merguez"
+  }
+]

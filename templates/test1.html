@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.bootstrap4.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+  <link href="../static/css/grayscale.min.css" rel="stylesheet">
+  <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css ">
+  <link rel="stylesheet" href=" https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css ">
+
+
+  <title>Grayscale - Start Bootstrap Theme</title>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">WELCOME</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center">
+        <h1 class="mx-auto my-0 text-uppercase">BIENVENUE SUR MON SITE DE LOCATION D'APPARTEMENTS</h1>
+        <!-- <h2 class="text-white-50 mx-auto mt-2 mb-5">A free, responsive, one page Bootstrap theme created by Start
+            Bootstrap.</h2>
+          <a href="#about" class="btn btn-primary js-scroll-trigger">Get Started</a> -->
+      </div>
+    </div>
+  </header>
+  <section>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <div style="width: 75%">
+      <canvas id="myChart2"></canvas>
+    </div>
+    <script>
+      var ctx = document.getElementById('myChart2').getContext('2d');
+      var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: [{% for i in indexe %} "{{i}}", {% endfor %}],
+      datasets: [{
+        label: 'tendance-bar',
+        backgroundColor: ["blue", "red", "green", "#328f8e", "black",
+          "rgba(216,158,158)", "rgba(216,158,108)", "rgba(216,158,258)", "rgba(116,158,258)", "rgba(116,258,258)"
+          ,"blue", "red", "green", "#328f8e", "black",
+          "rgba(216,158,158)", "rgba(216,158,108)", "rgba(216,158,258)", "rgba(116,158,258)", "rgba(116,258,258)",
+          "rgba(216,158,158)", "rgba(216,158,108)", "rgba(216,158,258)", "green", "#328f8e", "black", "rgba(116,158,258)"
+          ,"rgba(216,158,158)", "rgba(216,158,108)", "rgba(216,158,258)", "rgba(116,158,258)", "rgba(116,258,258)"
+          ,"blue", "red", "green", "#328f8e", "black", "rgba(216,158,108)", "rgba(216,158,258)", "red", "green", "#328f8e", "black"],
+        data: {{ nombre }},
+        },
+      {
+        type: 'line',
+        label: 'tendance-line',
+        backgroundColor: "red",
+        data: {{ nombre }},
+        fill: false
+      }
+      ]
+      },
+
+      // Configuration options go here
+      options: {
+        title: {
+          display: true,
+            text:'APPARTEMENTS LOCATION APPARTEMENTS'
+        }
+      }
+                    });
+    </script>
+    <!-- <h2 style="text-align:left">Welcome to mynWebsite</h2> -->
+    <style type="text/css">
+      td img{
+               
+              width: 50px;
+      }
+  </style>
+    <table id="example" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
+      <thead>
+        <tr>
+
+          <td>Description</td>
+          <td>Prix</td>
+          <td>LIEU</td>
+          <td>IMAGE</td>
+        </tr>
+      </thead>
+      <tbody>
+
+        {% for i in grand %}
+        <tr>
+
+          <td>{{i.location}}</td>
+          <td>{{i.prix}}</td>
+          <td>{{i.lieu}}</td>
+          <td>
+            <a href="{{i.source}}" target="_blank">
+              <img src="{{i.image}}" alt="">
+            </a>
+          </td>
+        </tr>
+        {% endfor %}
+
+      </tbody>
+      <tfoot>
+        <tr>
+
+          <td>Description</td>
+          <td>Prix</td>
+          <td>LIEU</td>
+          <td>IMAGE</td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+  <footer class="bg-black small text-center text-white-50">
+    <div class="container">
+      Copyright &copy; Your Website 2019
+    </div>
+  </footer>
+  <script src="../static/vendor/jquery/jquery.min.js"></script>
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+  <script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <script src="../static/js/grayscale.min.js"></script>
+  <!--  -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.bootstrap4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.colVis.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      var table = $('#example').DataTable({
+        lengthChange: false,
+        buttons: ['copy', 'excel', 'csv', 'pdf', 'colvis']
+      });
+
+      table.buttons().container()
+        .appendTo('#example_wrapper .col-md-6:eq(0)');
+    });
+  </script>
+
+</body>
+
+</html>
